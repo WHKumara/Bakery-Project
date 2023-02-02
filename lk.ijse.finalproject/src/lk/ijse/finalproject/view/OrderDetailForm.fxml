@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.OrderDetailFormController">
+   <children>
+      <TableView fx:id="tblOrderDetail" layoutX="82.0" layoutY="160.0" prefHeight="559.0" prefWidth="1294.0" stylesheets="@../values/style.css">
+        <columns>
+          <TableColumn fx:id="coleOrderId" editable="false" prefWidth="173.0" text="Order ID" />
+          <TableColumn fx:id="colCostId" editable="false" prefWidth="190.0" text="Cust ID" />
+            <TableColumn fx:id="colDate" editable="false" prefWidth="287.33331298828125" text="Date" />
+            <TableColumn fx:id="colTime" editable="false" prefWidth="252.66668701171875" text="Time" />
+            <TableColumn fx:id="colAmount" editable="false" prefWidth="299.33331298828125" text="Amount" />
+        </columns>
+         <styleClass>
+            <String fx:value="circle2" />
+            <String fx:value="payload" />
+         </styleClass>
+      </TableView>
+      <ImageView fitHeight="45.0" fitWidth="49.0" layoutX="59.0" layoutY="36.0" onMouseClicked="#imgBackAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/gg.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="110.0" layoutY="43.0" text="Back">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="1403.0" layoutY="342.0" text="Total Income :" textFill="#3700d0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIncome" layoutX="1445.0" layoutY="407.0" prefHeight="47.0" prefWidth="194.0" textFill="#cf0000" AnchorPane.bottomAnchor="342.0" AnchorPane.leftAnchor="1445.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="407.0">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="53.0" layoutX="1149.0" layoutY="86.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/search.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow color="#d7bdbd" />
+         </effect>
+      </ImageView>
+      <TextField fx:id="txtSearch" layoutX="1195.0" layoutY="83.0" onKeyTyped="#txtSearchAction" prefHeight="35.0" prefWidth="161.0" promptText="Search" style="-fx-background-radius: 20;">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow color="#bfacac" />
+         </effect>
+      </TextField>
+   </children>
+</AnchorPane>

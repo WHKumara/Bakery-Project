@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane1" prefHeight="796.0" prefWidth="1667.0" style="-fx-background-color: #F2F7FD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.AdminHomeFormController">
+   <children>
+      <ImageView fitHeight="221.0" fitWidth="373.0" layoutX="363.0" layoutY="99.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/download.png" />
+         </image>
+         <effect>
+            <DropShadow color="#a88585" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="221.0" fitWidth="373.0" layoutX="942.0" layoutY="99.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/download.png" />
+         </image>
+         <effect>
+            <DropShadow color="#a88585" />
+         </effect>
+      </ImageView>
+      <Label layoutX="391.0" layoutY="125.0" text="Total Orders" textFill="#625568">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrders" layoutX="451.0" layoutY="209.0" prefHeight="47.0" prefWidth="58.0" text="270">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <TextField layoutX="1354.0" layoutY="130.0" opacity="0.0" />
+      <ImageView fitHeight="71.0" fitWidth="78.0" layoutX="632.0" layoutY="197.0" onMouseClicked="#imgOrderAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/order.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="970.0" layoutY="126.0" text="Customer Count" textFill="#625568">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="310.0" fitWidth="450.0" layoutX="307.0" layoutY="388.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/download.png" />
+         </image>
+         <effect>
+            <DropShadow color="#a88585" />
+         </effect>
+      </ImageView>
+      <Label layoutX="335.0" layoutY="423.0" text="Vision" textFill="#625568">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="1208.0" layoutY="194.0" onMouseClicked="#imgCustomerAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/customers.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblCustomerCount" layoutX="1032.0" layoutY="204.0" text="180">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="485.0" text="To be the leading" textFill="#4e0dd4">
+         <font>
+            <Font name="Bauhaus 93" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="543.0" text="food chain in the " textFill="#4e0dd4">
+         <font>
+            <Font name="Bauhaus 93" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="460.0" layoutY="602.0" text="island" textFill="#4e0dd4">
+         <font>
+            <Font name="Bauhaus 93" size="44.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="310.0" fitWidth="542.0" layoutX="865.0" layoutY="380.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/download.png" />
+         </image>
+         <effect>
+            <DropShadow color="#a88585" />
+         </effect>
+      </ImageView>
+      <Label layoutX="893.0" layoutY="402.0" text="Mission" textFill="#625568">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="917.0" layoutY="469.0" text="Providing best quality" textFill="#4e0dd4">
+         <font>
+            <Font name="Bauhaus 93" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="945.0" layoutY="528.0" text="and delicious food" textFill="#4e0dd4">
+         <font>
+            <Font name="Bauhaus 93" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="925.0" layoutY="585.0" text="to our customer while" textFill="#4e0dd4">
+         <font>
+            <Font name="Bauhaus 93" size="44.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="58.0" layoutX="1323.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/mission.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="58.0" layoutX="683.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/goal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="221.0" fitWidth="373.0" layoutX="14.0" layoutY="155.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/download.png" />
+         </image>
+         <effect>
+            <DropShadow color="#a88585" />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblRawMaterialCount" layoutX="151.0" layoutY="245.0" prefHeight="47.0" prefWidth="58.0" text="270">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="185.0" text="Raw Material" textFill="#625568">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.StoreManageFormController">
+   <children>
+      <TableView fx:id="tblItem" layoutX="73.0" layoutY="100.0" prefHeight="597.0" prefWidth="1213.0" styleClass="payload" stylesheets="@../values/style.css">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="206.99996948242188" text="Item Code" />
+          <TableColumn fx:id="colItemType" prefWidth="353.0" text="Quantity" />
+            <TableColumn fx:id="colItemQty" prefWidth="310.0" text="Type" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="250.0" text="Unit Price" />
+        </columns>
+      </TableView>
+      <Pane layoutX="1334.0" layoutY="124.0" prefHeight="334.0" prefWidth="298.0">
+         <children>
+            <Label layoutX="6.0" layoutY="43.0" text="Item Code :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="94.0" text="Type :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCode" layoutX="154.0" layoutY="43.0" textFill="#393939">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="144.0" text="QTY :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblType" layoutX="154.0" layoutY="91.0" textFill="#393939">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblQty" layoutX="154.0" layoutY="133.0" textFill="#393939">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="184.0" text="Unit Price :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrice" layoutX="154.0" layoutY="178.0" textFill="#393939">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="244.0" onMouseClicked="#onUpdateAction" text="Update Details" textFill="#1b57c3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="imgUpdate" fitHeight="30.0" fitWidth="37.0" layoutX="34.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/logo/update.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="prgCircle" layoutX="31.0" layoutY="244.0" prefHeight="30.0" prefWidth="37.0" visible="false" />
+            <Pane fx:id="panDelete" layoutX="48.0" layoutY="283.0" prefHeight="43.0" prefWidth="177.0">
+               <children>
+                  <Label layoutX="58.0" layoutY="7.0" onMouseClicked="#onDeleteAction" text="Delete" textFill="#950a1c">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <ImageView fx:id="imgUpdate1" fitHeight="30.0" fitWidth="37.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assests/logo/close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="96.0" fitWidth="58.0" layoutX="1475.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/item.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblAddNewItem" layoutX="1407.0" layoutY="91.0" onMouseClicked="#lblAddItemAction" text="+ Add New Item" textFill="#0600bc">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Pane fx:id="paneUpdate" layoutX="1345.0" layoutY="461.0" prefHeight="307.0" prefWidth="267.0" visible="false">
+         <children>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="76.0" layoutY="232.0" onAction="#btnUpdateAction" prefHeight="43.0" prefWidth="122.0" style="-fx-background-color: #20A4E6;" styleClass="circle2" stylesheets="@../values/style.css" text="UPDATE" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="31.0" layoutY="38.0" text="Quantity :">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="121.0" text="Unit Price :">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNewQty" layoutX="44.0" layoutY="68.0" onKeyTyped="#onKeyTypeQty" style="-fx-background-radius: 35;" />
+            <TextField fx:id="txtNewPrice" layoutX="44.0" layoutY="161.0" onKeyTyped="#OnKeyTypePrice" style="-fx-background-radius: 35;" />
+            <Separator layoutX="10.0" layoutY="5.0" prefHeight="20.0" prefWidth="254.0" />
+            <ImageView fx:id="imgUpdate11" fitHeight="30.0" fitWidth="37.0" layoutX="223.0" layoutY="238.0" onMouseClicked="#onCancelAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/logo/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow color="#867676" />
+               </effect>
+            </ImageView>
+            <Label fx:id="lblPriceWarning" layoutX="53.0" layoutY="192.0" prefHeight="20.0" prefWidth="103.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblQtyWarning" layoutX="53.0" layoutY="99.0" prefHeight="20.0" prefWidth="103.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearch" layoutX="1060.0" layoutY="34.0" onKeyTyped="#txtSearchAction" promptText="Search" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow color="#bfaeae" />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="43.0" fitWidth="37.0" layoutX="1004.0" layoutY="34.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/search.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow color="#b9a1a1" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

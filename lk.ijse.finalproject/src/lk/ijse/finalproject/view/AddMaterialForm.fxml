@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.AddMaterialFormController">
+   <children>
+      <Label layoutX="70.0" layoutY="124.0" prefHeight="46.0" prefWidth="230.0" text="Material Code :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemCode" layoutX="330.0" layoutY="124.0" prefHeight="46.0" prefWidth="186.0" text="code" textFill="#1000ff">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="163.0" layoutY="223.0" prefHeight="59.0" prefWidth="196.0" text="Mterial Type :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="163.0" layoutY="385.0" prefHeight="69.0" prefWidth="196.0" text="Quantity :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaterialType" layoutX="179.0" layoutY="303.0" prefHeight="52.0" prefWidth="532.0" promptText="Type " style="-fx-background-radius: 10;">
+         <effect>
+            <DropShadow color="#b9a3a3" />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtQuantity" layoutX="181.0" layoutY="463.0" prefHeight="52.0" prefWidth="532.0" promptText="Quantity" style="-fx-background-radius: 10;">
+         <effect>
+            <DropShadow color="#b9a3a3" />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="962.0" layoutY="234.0" prefHeight="69.0" prefWidth="196.0" text="Supplier :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="1097.0" layoutY="491.0" onAction="#btnAddAction" prefHeight="44.0" prefWidth="186.0" style="-fx-background-color: #20A4E6;" styleClass="circle2" stylesheets="@../values/style.css" text="+ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="44.0" fitWidth="101.0" layoutX="1036.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="1039.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/close.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="38.0" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="69.0" fitWidth="54.0" layoutX="26.0" layoutY="21.0" onMouseClicked="#backAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/gg.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ComboBox fx:id="cmbSupplier" layoutX="1015.0" layoutY="329.0" prefHeight="44.0" prefWidth="305.0" promptText="Select Supplier">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Separator layoutX="53.0" layoutY="169.0" prefHeight="44.0" prefWidth="631.0" />
+      <JFXButton buttonType="RAISED" layoutX="1090.0" layoutY="578.0" onAction="#btnCancelAction" prefHeight="44.0" prefWidth="201.0" style="-fx-background-color: #C1330B;" styleClass="circle2" stylesheets="@../values/style.css" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblQtyWarning" layoutX="185.0" layoutY="522.0" prefHeight="21.0" prefWidth="196.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

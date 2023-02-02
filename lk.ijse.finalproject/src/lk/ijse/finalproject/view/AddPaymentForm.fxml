@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.AddPaymentFormController">
+   <children>
+      <Label layoutX="70.0" layoutY="124.0" prefHeight="46.0" prefWidth="210.0" text="Payment Id : ">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentId" layoutX="266.0" layoutY="124.0" prefHeight="46.0" prefWidth="186.0" text="code" textFill="#4000ff">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="163.0" layoutY="223.0" prefHeight="59.0" prefWidth="196.0" text="Amount : ">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="179.0" layoutY="400.0" prefHeight="69.0" prefWidth="196.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="218.0" layoutY="287.0" prefHeight="52.0" prefWidth="420.0" promptText="Type " style="-fx-background-radius: 10;">
+         <effect>
+            <DropShadow color="#b9a3a3" />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="969.0" layoutY="218.0" prefHeight="69.0" prefWidth="196.0" text="Supplier :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="1053.0" layoutY="506.0" onAction="#btnAddAction" prefHeight="51.0" prefWidth="209.0" style="-fx-background-color: #20A4E6;" styleClass="circle2" stylesheets="@../values/style.css" text="+ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="1061.0" layoutY="620.0" onAction="#btnCancleAction" prefHeight="51.0" prefWidth="209.0" style="-fx-background-color: #C1330B;" styleClass="circle2" stylesheets="@../values/style.css" text="Cancle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="973.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="992.0" layoutY="631.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/close.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="38.0" text="Back">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="69.0" fitWidth="54.0" layoutX="26.0" layoutY="21.0" onMouseClicked="#backAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/gg.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ComboBox fx:id="cmbSupplier" layoutX="973.0" layoutY="308.0" onAction="#cmbSelctAction" prefHeight="44.0" prefWidth="305.0" promptText="Select Supplier">
+         <effect>
+            <DropShadow color="#e4b8b8" />
+         </effect></ComboBox>
+      <Label fx:id="lblDate" layoutX="279.0" layoutY="462.0" prefHeight="69.0" prefWidth="196.0" textFill="#7b4fff">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSupId" layoutX="1128.0" layoutY="215.0" prefHeight="69.0" prefWidth="196.0" text="suppId">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="555.0" prefHeight="69.0" prefWidth="196.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="299.0" layoutY="615.0" prefHeight="61.0" prefWidth="193.0" textFill="#7b4fff">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Separator layoutX="75.0" layoutY="187.0" prefHeight="2.0" prefWidth="690.0" />
+      <Label fx:id="lblAmountWarning" layoutX="218.0" layoutY="331.0" prefHeight="51.0" prefWidth="196.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

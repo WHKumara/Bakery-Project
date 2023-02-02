@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.SupplierFormController">
+   <children>
+      <TableView fx:id="tblSupplier" layoutX="66.0" layoutY="156.0" prefHeight="541.0" prefWidth="1193.0" stylesheets="@../values/style.css">
+        <columns>
+          <TableColumn fx:id="colSuppId" prefWidth="148.0" text="Supp ID" />
+          <TableColumn fx:id="colName" prefWidth="290.0" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="206.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="250.0" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="209.0" text="Email" />
+        </columns>
+         <styleClass>
+            <String fx:value="payload" />
+            <String fx:value="circle2" />
+         </styleClass>
+      </TableView>
+      <Label layoutX="1414.0" layoutY="84.0" onMouseClicked="#addSupplierAction" text=" + Add Supplier" textFill="#0600bc">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1473.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/addEmp.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="1308.0" layoutY="118.0" prefHeight="300.0" prefWidth="328.0">
+         <children>
+            <Label layoutX="34.0" layoutY="49.0" text="Supp ID :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label layoutX="54.0" layoutY="96.0" text="Name :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label layoutX="38.0" layoutY="146.0" text="Contact :" textFill="#0e8ad3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblSupId" layoutX="150.0" layoutY="45.0" prefHeight="34.0" prefWidth="156.0" textFill="#1b1b1b">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblName" layoutX="142.0" layoutY="96.0" prefHeight="34.0" prefWidth="158.0" textFill="#1b1b1b">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblContact" layoutX="150.0" layoutY="148.0" prefHeight="34.0" prefWidth="144.0" textFill="#1b1b1b">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label layoutX="79.0" layoutY="206.0" onMouseClicked="#onClickUpdate" text="Update Details" textFill="#1b57c3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="imgUpdate" fitHeight="31.0" fitWidth="31.0" layoutX="39.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/logo/update.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="prgCircle" layoutX="45.0" layoutY="210.0" prefHeight="25.0" prefWidth="24.0" visible="false" />
+            <Pane fx:id="paneDelete" layoutX="52.0" layoutY="245.0" prefHeight="42.0" prefWidth="189.0">
+               <children>
+                  <ImageView fx:id="imgUpdate1" fitHeight="31.0" fitWidth="31.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assests/logo/close.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="70.0" layoutY="5.0" onMouseClicked="#onDeleteAction" text="Delete" textFill="#950a1c">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="paneUpdate" layoutX="1321.0" layoutY="409.0" prefHeight="311.0" prefWidth="263.0" visible="false">
+         <children>
+            <Label layoutX="7.0" layoutY="11.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label layoutX="10.0" layoutY="79.0" text="Contact :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label layoutX="9.0" layoutY="162.0" text="Address :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <TextField fx:id="txtName" layoutX="26.0" layoutY="42.0" onKeyTyped="#onNameTyped" prefHeight="31.0" prefWidth="223.0" promptText="Type Name" style="-fx-background-radius: 35;" />
+            <TextField fx:id="txtContact" layoutX="30.0" layoutY="112.0" onKeyTyped="#onContactTyped" prefHeight="31.0" prefWidth="219.0" promptText="Type Contact" style="-fx-background-radius: 35;" />
+            <TextArea fx:id="txtAddress" layoutX="31.0" layoutY="188.0" onKeyTyped="#onAddressTyped" prefHeight="47.0" prefWidth="216.0" promptText="Type Address" />
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="82.0" layoutY="264.0" onAction="#btnUpdateAction" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: #20A4E6;" styleClass="circle2" stylesheets="@../values/style.css" text="Update" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="3.0" layoutY="-2.0" prefHeight="10.0" prefWidth="273.0" />
+            <ImageView fx:id="imgUpdate11" fitHeight="23.0" fitWidth="24.0" layoutX="230.0" layoutY="279.0" onMouseClicked="#onCancelAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/logo/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow color="#a89090" />
+               </effect>
+            </ImageView>
+            <Label fx:id="lblContactWarning" layoutX="33.0" layoutY="143.0" prefHeight="25.0" prefWidth="156.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblAddressWarning" layoutX="33.0" layoutY="238.0" prefHeight="25.0" prefWidth="105.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearch" layoutX="1022.0" layoutY="90.0" onKeyTyped="#txtSearchAction" promptText="Search" style="-fx-background-radius: 20;">
+         <effect>
+            <DropShadow color="#cdb8b8" />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="966.0" layoutY="85.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/search.png" />
+         </image>
+         <effect>
+            <DropShadow color="#cdb8b8" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

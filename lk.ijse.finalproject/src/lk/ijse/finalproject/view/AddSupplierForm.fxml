@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" style="-fx-background-radius: 35;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalproject.controller.AddSupplierFromController">
+   <children>
+      <Label layoutX="109.0" layoutY="119.0" text="Supplier ID :">
+         <font>
+            <Font name="Bell MT Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSuppId" layoutX="343.0" layoutY="118.0" prefHeight="41.0" prefWidth="193.0" text="id" textFill="#2808f5">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSupName" layoutX="125.0" layoutY="258.0" onAction="#txtNameAction" prefHeight="54.0" prefWidth="581.0" promptText="Type Name" style="-fx-background-color: #FDFDFF;" styleClass="circle" stylesheets="@../values/style.css">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <effect>
+            <DropShadow color="#cdbebe" />
+         </effect>
+      </TextField>
+      <Label layoutX="131.0" layoutY="206.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="367.0" text="Address :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSuppAddress" layoutX="125.0" layoutY="434.0" prefHeight="54.0" prefWidth="581.0" promptText="Type Address" style="-fx-background-color: #FDFDFF;" styleClass="circle" stylesheets="@../values/style.css">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <effect>
+            <DropShadow color="#bcb7b7" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtSuppContact" layoutX="131.0" layoutY="618.0" onAction="#txtContactAction" prefHeight="54.0" prefWidth="581.0" promptText="Type Contact" style="-fx-background-color: #FDFDFF;" styleClass="circle" stylesheets="@../values/style.css">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <effect>
+            <DropShadow color="#aea6a6" />
+         </effect>
+      </TextField>
+      <Label layoutX="118.0" layoutY="542.0" text="Contact :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSuppEmail" layoutX="860.0" layoutY="336.0" onAction="#txtmailOnAction" prefHeight="54.0" prefWidth="581.0" promptText="Type Email" style="-fx-background-color: #FDFDFF;" styleClass="circle" stylesheets="@../values/style.css">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <effect>
+            <DropShadow color="#d0b9b9" />
+         </effect>
+      </TextField>
+      <Label layoutX="865.0" layoutY="272.0" text="E-mail :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1080.0" layoutY="517.0" onAction="#btnAddAction" prefHeight="47.0" prefWidth="240.0" style="-fx-background-color: #3CCBF4;" styleClass="circle" stylesheets="@../values/style.css" text="+Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="47.0" fitWidth="46.0" layoutX="1012.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/add.png" />
+         </image>
+         <effect>
+            <DropShadow color="#948b8b" />
+         </effect>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="1080.0" layoutY="636.0" onAction="#btnClearAction" prefHeight="47.0" prefWidth="244.0" style="-fx-background-color: #C1330B;" styleClass="circle" stylesheets="@../values/style.css" text="Cancle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="1018.0" layoutY="639.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/close.png" />
+         </image>
+         <effect>
+            <DropShadow color="#947b7b" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="S" fitHeight="46.0" fitWidth="59.0" layoutX="41.0" layoutY="21.0" onMouseClicked="#backAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/logo/gg.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="96.0" layoutY="29.0" text="Back">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMailWarning" layoutX="875.0" layoutY="404.0" prefHeight="27.0" prefWidth="235.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContactWarning" layoutX="159.0" layoutY="686.0" prefHeight="27.0" prefWidth="235.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNameWarning" layoutX="158.0" layoutY="324.0" prefHeight="27.0" prefWidth="235.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
